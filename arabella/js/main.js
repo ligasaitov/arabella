@@ -15,6 +15,191 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
+//Adaptive functions
+$(window).resize(function(event) {
+	adaptive_function();
+});
+function adaptive_header(w,h) {
+		var headerMenu=$('.header-menu');
+		var headerContacts=$('.header-contacts');
+	if(w<767){
+		if(!headerContacts.hasClass('done')){
+			headerContacts.addClass('done').appendTo(headerMenu);
+		}
+	}else{
+		if(headerContacts.hasClass('done')){
+			headerContacts.removeClass('done').appendTo(headerMenu);
+		}
+	}
+}
+function adaptive_function() {
+		var w=$(window).outerWidth();
+		var h=$(window).outerHeight();
+	adaptive_header(w,h);
+}
+	adaptive_function();
+//SLIDERS
+if($('.mainslider').length>0){
+	$('.mainslider').slick({
+		autoplay: true,
+		//infinite: false,
+		dots: true,
+		arrows: true,
+		accessibility:false,
+		slidesToShow:4,
+		autoplaySpeed: 3000,
+		//asNavFor:'',
+		//appendDots:
+		//appendArrows:$('.mainslider-arrows .container'),
+		nextArrow:'<button type="button" class="slick-next"></button>',
+		prevArrow:'<button type="button" class="slick-prev"></button>',
+		responsive: [{
+			breakpoint: 768,
+			settings: {}
+		}]
+	});
+}
+
+
+//SLICK FIX
+if($('.objects-slider').length>0){
+	var slider=$('.objects-slider');
+	slider.slick({
+		//autoplay: true,
+		//infinite: false,
+		infinite: true,
+		dots: true,
+		arrows: true,
+		accessibility:false,
+		slidesToShow:2,
+		slidesToScroll:1,
+		autoplaySpeed: 3000,
+		speed: 500,
+		waitForAnimate:false,
+		//asNavFor:'',
+		//appendDots:
+		appendDots:$('.objects-controls'),
+		appendArrows:$('.objects-controls'),
+		nextArrow:'<button type="button" class="slick-next"></button>',
+		prevArrow:'<button type="button" class="slick-prev"></button>',
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow:1,
+				slidesToScroll:1,
+			}
+		}]
+	});
+	var sltoshow=slider.get(0).slick.options.slidesToShow;
+	var all=slider.find('.slick-slide').length;
+	var allactive=slider.find('.slick-slide').not('.slick-cloned').length;
+	slider.on('beforeChange', function(event,slick,currentSlide,nextSlide){
+		if(nextSlide==0){
+			var ind=all-allactive;
+			if(sltoshow==1){
+				slider.find('.slick-slide').eq(ind).addClass('active');
+			}else{
+				sliderfix(slider,ind);
+			}
+		}
+		if(nextSlide==allactive-1){
+			if(sltoshow==1){
+				slider.find('.slick-slide').eq(0).addClass('active');
+			}else{
+				sliderfix(slider,sltoshow-1);
+			}
+		}
+
+		//DIRECTION
+		if (currentSlide === 0 && nextSlide === slick.$slides.length - 1) {
+			direction = 'prev';
+		}else if(nextSlide > currentSlide || (currentSlide === (slick.$slides.length - 1) && nextSlide === 0 )) {
+			direction = 'next';
+		}else{
+			direction = 'prev';
+		}
+		//console.log(direction);
+	});
+	slider.on('afterChange', function(event, slick, currentSlide){
+		slider.find('.slick-slide').removeClass('active');
+	});
+	function sliderfix(slider,v){
+		for (var i=0; i < sltoshow; i++) {
+			var n=v+i;
+			slider.find('.slick-slide').eq(n).addClass('active');
+		}
+	}
+
+
+}
+
+if($('.newsmodule-slider').length>0){
+	$('.newsmodule-slider').slick({
+		//autoplay: true,
+		//infinite: false,
+		fade:true,
+		dots: false,
+		arrows: false,
+		accessibility:false,
+		slidesToShow:1,
+		autoplaySpeed: 3000,
+		//asNavFor:'',
+		//appendDots:
+		//appendArrows:$('.mainslider-arrows .container'),
+		nextArrow:'<button type="button" class="slick-next fa fa-angle-right"></button>',
+		prevArrow:'<button type="button" class="slick-prev fa fa-angle-left"></button>',
+		responsive: [{
+			breakpoint: 768,
+			settings: {	}
+		}]
+	});
+	//Опция
+	$('.newsmodule-slider').get(0).slick.options.slidesToShow
+
+	$('.newsmodule-items-item').click(function(event) {
+		$('.newsmodule-items-item').removeClass('active');
+		$(this).addClass('active');
+		$('.newsmodule-slider').slick('goTo',$(this).index());
+	});
+	$('.newsmodule-navigator-info span').eq(1).html($('.newsmodule-items-item').length);
+	
+	$('.newsmodule-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.newsmodule-navigator-info span').eq(0).html(nextSlide+1);
+	});
+	$('.newsmodule-slider').on('afterChange', function(event, slick, currentSlide){
+		$('.newsmodule-navigator-info span').eq(0).html(currentSlide+1);
+	});
+	$('.newsmodule-navigator__arrow.fa-angle-left').click(function(event) {
+		$('.newsmodule-slider').slick('slickPrev');
+	});
+	$('.newsmodule-navigator__arrow.fa-angle-right').click(function(event) {
+		$('.newsmodule-slider').slick('slickNext');
+	});
+}
+
+// ============================================================================
+ 
+if($('.main__slider').length>0){
+	$('.main__slider').slick({
+		autoplay: false,
+		//infinite: false,
+		dots: false,
+		arrows: false,
+		accessibility:false,
+		slidesToShow:1,
+		autoplaySpeed: 5000,
+		adaptiveHeight: true,
+		//asNavFor:'',
+		// appendDots: $('.main__slider_dots'),
+		//appendArrows:$('.main__slider-arrows .container'),
+		// nextArrow:'<button type="button" class="slick-next"></button>',
+		// prevArrow:'<button type="button" class="slick-prev"></button>',
+		responsive: [{
+			breakpoint: 768,
+			settings: {}
+		}]
+	});
+}
 //FORMS
 function forms(){
 	//SELECT
@@ -271,7 +456,7 @@ function forms(){
 	$.each($('input.phone'), function(index, val) {
 		$(this).attr('type','tel');
 		$(this).focus(function(){
-			$(this).inputmask('+7(999) 999 9999',{clearIncomplete: true,clearMaskOnLostFocus: true,
+			$(this).inputmask('+7 999 999-99-99',{clearIncomplete: true,clearMaskOnLostFocus: true,
 				"onincomplete": function(){maskclear($(this));}
 			});
 			$(this).addClass('focus');
@@ -636,63 +821,17 @@ function searchselectreset() {
 		}
 	});
 }
-function testWebP(callback) {
-
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-
-	if (support == true) {
-		document.querySelector('body').classList.add('webp');
-	}
-})
-/*
- * Replace all SVG images with inline SVG
- */
-jQuery('img.svg').each(function () {
-	var $img = jQuery(this);
-	var imgID = $img.attr('id');
-	var imgClass = $img.attr('class');
-	var imgURL = $img.attr('src');
-
-	jQuery.get(imgURL, function (data) {
-		// Get the SVG tag, ignore the rest
-		var $svg = jQuery(data).find('svg');
-
-		// Add replaced image's ID to the new SVG
-		if (typeof imgID !== 'undefined') {
-			$svg = $svg.attr('id', imgID);
-		}
-		// Add replaced image's classes to the new SVG
-		if (typeof imgClass !== 'undefined') {
-			$svg = $svg.attr('class', imgClass + ' replaced-svg');
-		}
-
-		// Remove any invalid XML tags as per http://validator.w3.org
-		$svg = $svg.removeAttr('xmlns:a');
-
-		// Replace image with new SVG
-		$img.replaceWith($svg);
-
-	}, 'xml');
-
-});
 	var isMobile = {Android: function() {return navigator.userAgent.match(/Android/i);},BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},Windows: function() {return navigator.userAgent.match(/IEMobile/i);},any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}};
 	if(isMobile.any()){}
 
-		if(location.hash){
-			var hsh=location.hash.replace('#','');
-			if($('.popup-'+hsh).length>0){
-				popupOpen(hsh);
-			}else if($('div.'+hsh).length>0){
-				$('body,html').animate({scrollTop:$('div.'+hsh).offset().top,},500, function(){});
-			}
-		}
+		// if(location.hash){
+		// 	var hsh=location.hash.replace('#','');
+		// 	if($('.popup-'+hsh).length>0){
+		// 		popupOpen(hsh);
+		// 	}else if($('div.'+hsh).length>0){
+		// 		$('body,html').animate({scrollTop:$('div.'+hsh).offset().top,},500, function(){});
+		// 	}
+		// }
 		$('.wrapper').addClass('loaded');
 
 		var act="click";
@@ -970,6 +1109,14 @@ $('.header__link').on('click', function(e){
 	e.preventDefault();
 });
 
+$('.goods__card_comparison').click(function(event) {
+	$(this).toggleClass('active');
+});
+
+$('.form__consultation .check').click(function(event) {
+	$('.form__consultation button.disable').toggleClass('not-disable');
+});
+
 // BURGER
 // $('.header__burger').click(function(event) {
 // 	$('.header__burger, .header__menu').toggleClass('active');
@@ -999,27 +1146,50 @@ $('.header__link').on('click', function(e){
 // });
 
 
-//Adaptive functions
-$(window).resize(function(event) {
-	adaptive_function();
-});
-function adaptive_header(w,h) {
-		var headerMenu=$('.header-menu');
-		var headerContacts=$('.header-contacts');
-	if(w<767){
-		if(!headerContacts.hasClass('done')){
-			headerContacts.addClass('done').appendTo(headerMenu);
-		}
-	}else{
-		if(headerContacts.hasClass('done')){
-			headerContacts.removeClass('done').appendTo(headerMenu);
-		}
+function testWebP(callback) {
+
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+
+testWebP(function (support) {
+
+	if (support == true) {
+		document.querySelector('body').classList.add('webp');
 	}
-}
-function adaptive_function() {
-		var w=$(window).outerWidth();
-		var h=$(window).outerHeight();
-	adaptive_header(w,h);
-}
-	adaptive_function();
+})
+/*
+ * Replace all SVG images with inline SVG
+ */
+jQuery('img.svg').each(function () {
+	var $img = jQuery(this);
+	var imgID = $img.attr('id');
+	var imgClass = $img.attr('class');
+	var imgURL = $img.attr('src');
+
+	jQuery.get(imgURL, function (data) {
+		// Get the SVG tag, ignore the rest
+		var $svg = jQuery(data).find('svg');
+
+		// Add replaced image's ID to the new SVG
+		if (typeof imgID !== 'undefined') {
+			$svg = $svg.attr('id', imgID);
+		}
+		// Add replaced image's classes to the new SVG
+		if (typeof imgClass !== 'undefined') {
+			$svg = $svg.attr('class', imgClass + ' replaced-svg');
+		}
+
+		// Remove any invalid XML tags as per http://validator.w3.org
+		$svg = $svg.removeAttr('xmlns:a');
+
+		// Replace image with new SVG
+		$img.replaceWith($svg);
+
+	}, 'xml');
+
+});
 });
