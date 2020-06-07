@@ -1021,7 +1021,42 @@ $('.form__consultation .check').click(function(event) {
 // 	return false;
 // });
 
+// filter sort
+let sortPrise = $('.goods__filter_sort_price');
+let sortPopularity = $('.goods__filter_sort_popularity');
+let cardList = $('.goods__card_list');
+sortPrise.click(function(event) {
+	$(this).addClass('active');
+	$(this).toggleClass('asc desc');
+	sortPopularity.removeClass('active');
+	cardList.toggleClass('price-asc price-desc');
+});
+sortPopularity.click(function(event) {
+	$(this).addClass('active');
+	$(this).toggleClass('asc desc');
+	sortPrise.removeClass('active');
+	cardList.toggleClass('popularity-asc popularity-desc');
+});
 
+// filter grid/list
+let gridBtn = $('.goods__filter_grid');
+gridBtn.click(function(event) {
+	$(this).toggleClass('active');
+	cardList.toggleClass('list grid');
+});
+
+// nav categories
+let newCatNavIcon = '<span class="cat-nav-icon"></span>';
+let catNavSublist = $('.catalog__nav_sublist');
+
+catNavSublist.parent().prepend(newCatNavIcon);
+
+let catNavIcon = $('.cat-nav-icon');
+
+catNavIcon.click(function(event) {
+	$(this).toggleClass('active');
+	$(this).parent().toggleClass('active');
+});
 function testWebP(callback) {
 
 	var webP = new Image();
