@@ -1379,28 +1379,11 @@ footer .footer__body .callback:after {
           flex-wrap: wrap;
 }
 
-.assortment__list a {
-  -webkit-flex-basis: 33.333%;
-      -ms-flex-preferred-size: 33.333%;
-          flex-basis: 33.333%;
-  display: block;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.assortment__list a svg path {
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.assortment__list a:hover svg path[fill="#788CA4"] {
-  fill: #F24D4D;
-}
-
 .assortment__list_item {
-  height: 246px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.333%;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
   background: #F5F6F7;
   padding: 30px 20px;
   display: -webkit-flex;
@@ -1415,6 +1398,23 @@ footer .footer__body .callback:after {
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid rgba(120, 140, 164, 0.3);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.assortment__list_item svg path {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.assortment__list_item:hover a {
+  color: #F24D4D;
+}
+
+.assortment__list_item:hover svg path[fill="#788CA4"] {
+  fill: #F24D4D;
 }
 
 .assortment__list_item_icon svg {
@@ -2609,14 +2609,18 @@ footer .footer__body .callback:after {
 }
 
 .goods__card {
-  width: 360px;
+  -webkit-flex-basis: -webkit-calc(25% - 20px);
+      -ms-flex-preferred-size: calc(25% - 20px);
+          flex-basis: calc(25% - 20px);
+  min-width: 290px;
   background: #F5F6F7;
   padding: 30px;
-  margin: 10px 5px;
+  margin: 10px;
 }
 
 .goods__card_list {
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px -10px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -2945,6 +2949,16 @@ footer .footer__body .callback:after {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.catalog__card_list {
+  padding: 0px 0px 0px 30px;
+}
+
+.catalog__card_list .goods__card {
+  -webkit-flex-basis: -webkit-calc(33.333% - 20px);
+      -ms-flex-preferred-size: calc(33.333% - 20px);
+          flex-basis: calc(33.333% - 20px);
 }
 
 /*!
