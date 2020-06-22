@@ -835,14 +835,14 @@ function searchselectreset() {
 	var isMobile = {Android: function() {return navigator.userAgent.match(/Android/i);},BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},Windows: function() {return navigator.userAgent.match(/IEMobile/i);},any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}};
 	if(isMobile.any()){}
 
-		// if(location.hash){
-		// 	var hsh=location.hash.replace('#','');
-		// 	if($('.popup-'+hsh).length>0){
-		// 		popupOpen(hsh);
-		// 	}else if($('div.'+hsh).length>0){
-		// 		$('body,html').animate({scrollTop:$('div.'+hsh).offset().top,},500, function(){});
-		// 	}
-		// }
+		if(location.hash){
+			var hsh=location.hash.replace('#','');
+			if($('.popup-'+hsh).length>0){
+				popupOpen(hsh);
+			}else if($('div.'+hsh).length>0){
+				$('body,html').animate({scrollTop:$('div.'+hsh).offset().top,},500, function(){});
+			}
+		}
 		$('.wrapper').addClass('loaded');
 
 		var act="click";
@@ -852,7 +852,7 @@ function searchselectreset() {
 
 		$('.header-menu__icon').click(function(event) {
 			$(this).toggleClass('active');
-			$('.header-menu').toggleClass('active');
+			$('.header__bottom').toggleClass('active');
 			if($(this).hasClass('active')){
 				$('body').data('scroll',$(window).scrollTop());
 			}
@@ -1207,8 +1207,10 @@ if(mainSlider.length > 0) {
 		speed: 1000,
 		adaptiveHeight: true,
 		responsive: [{
-			breakpoint: 768,
-			settings: {}
+			breakpoint: 980.98,
+			settings: {
+				dots: true,
+			}
 		}]
 	});
 }
@@ -1231,12 +1233,21 @@ if (servicesSlider.length > 0 && servicesSliderNav.length > 0) {
 		dots: false,
 		centerMode: false,
 		focusOnSelect: true,
+		appendDots: $('.services__slider_dots'),
 		appendArrows: $('.services__slider_nav_arrows'),
 		nextArrow:'<button type="button" class="slick-next"><img class="svg" src="img/icons/arrow-right.svg" alt="" /></button>',
 		prevArrow:'<button type="button" class="slick-prev"><img class="svg" src="img/icons/arrow-left.svg" alt="" /></button>',
 	  // autoplay: true,
 	  // autoplaySpeed: 5000,
 	  // speed: 1000,
+	  responsive: [{
+	  	breakpoint: 1170.98,
+	  	settings: {
+	  		dots: true,
+	  		arrows: false,
+	  		slidesToShow: 4,
+	  	}
+	  }]
 	});
 }
 
@@ -1248,7 +1259,20 @@ let gallerySettings = {
 	slidesToScroll: 1,
 	arrows: false,
 	fade: true,
-	asNavFor: '.our-works__slider_nav .slides'
+	asNavFor: '.our-works__slider_nav .slides',
+	responsive: [{
+		breakpoint: 767.98,
+		settings: {
+			vertical: true,
+			verticalSwiping: true,
+			infinite: false,
+			arrows: false,
+			dots: false,
+			slidesToShow: 3,
+			slidesToScroll: 3,
+			fade: false,
+		}
+	}]
 }
 let galleryNavSettings = {
 		slidesToShow: 3,
@@ -1265,6 +1289,16 @@ let galleryNavSettings = {
 	  // autoplay: true,
 	  // autoplaySpeed: 5000,
 	  // speed: 1000
+	  responsive: [{
+	  	breakpoint: 1170.98,
+	  	settings: {
+	  		vertical: false,
+	  		verticalSwiping: false,
+	  		arrows: false,
+	  		dots: true,
+	  		slidesToShow: 4,
+	  	}
+	  }]
 }
 
 if (gallerySlider.length > 0 && gallerySliderNav.length > 0) {
