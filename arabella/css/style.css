@@ -4474,22 +4474,27 @@ footer .footer__body .callback:after {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0px 0px 20px 0px;
+}
+
+.product__actions .goods__card_quantity {
+  margin: 0px 30px 0px 0px;
 }
 
 .product__price {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
+  margin: 0px 30px 0px 0px;
 }
 
 .product__price:after {
   content: ' ₽';
   font-weight: 500;
+}
+
+.product__attribute {
+  margin: 0px 0px 30px 0px;
 }
 
 .product__attribute__color {
@@ -4549,6 +4554,78 @@ footer .footer__body .callback:after {
 
 .compare__link svg {
   margin: 0px 10px 0px 0px;
+}
+
+.product__meta_info {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.product__count {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__count .product__count-line {
+  margin: 0px 10px 0px 0px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product__count .product__count-line span {
+  display: inline-block;
+  width: 25px;
+  height: 5px;
+  background: #37414E;
+  opacity: 0.2;
+  margin: 0px 2px;
+}
+
+.product__count .product__count-line.product__count-line-1 span:nth-child(1) {
+  background: #F24D4D;
+  opacity: 1;
+}
+
+.product__count .product__count-line.product__count-line-2 span:not(:last-child) {
+  background: #F24D4D;
+  opacity: 1;
+}
+
+.product__count .product__count-line.product__count-line-3 span {
+  background: #F24D4D;
+  opacity: 1;
+}
+
+.demo .product__count {
+  margin: 0px 0px 10px 0px;
 }
 
 /*!
