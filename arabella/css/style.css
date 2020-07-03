@@ -4765,6 +4765,50 @@ footer .footer__body .callback:after {
   margin: 0px 0px 10px 0px;
 }
 
+.form-search {
+  position: relative;
+}
+
+.form-search input {
+  padding: 0px 75px 0px 20px;
+}
+
+.form-search .btn_search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #dedede;
+  background: -webkit-gradient(linear, left top, left bottom, from(#465568), to(#465568));
+  background: -o-linear-gradient(top, #465568 0%, #465568 100%);
+  background: linear-gradient(180deg, #465568 0%, #465568 100%);
+}
+
+.popup-cart .popup-content {
+  max-width: 1230px;
+}
+
+.popup-comparison .popup-content {
+  max-width: 1230px;
+}
+
+.popup-privacy .popup-content {
+  max-width: 1230px;
+}
+
+.popup-add-cart .popup-content {
+  max-width: 1230px;
+}
+
+.popup-add-cart .popup-content .buttons-actions {
+  margin: 20px -20px 0px -20px;
+}
+
+.popup-add-cart .popup-content .buttons-actions .btn {
+  margin: 0px 20px;
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
