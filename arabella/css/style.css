@@ -4999,6 +4999,11 @@ footer .footer__body .callback:after {
   line-height: 23px;
 }
 
+.news-image {
+  height: 370px;
+  margin: 0px 0px 30px 0px;
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
