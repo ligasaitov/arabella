@@ -6411,10 +6411,6 @@ ol.counter li:before {
     display: none;
   }
 
-  .wrap-gray {
-    padding: 0px 0px 0px 0px;
-  }
-
   .main__slider_item.ibg {
     background-size: 80% 100%;
   }
