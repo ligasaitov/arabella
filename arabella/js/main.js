@@ -876,6 +876,8 @@ var cpName = $('.popup-add-comparison .product-name');
 var qVal = $('.popup-add-cart .q-val');
 var pcBtn = $('.goods__card_cart a');
 var cpBtn = $('.goods__card_comparison a');
+var ppBtn = $('.product__actions .product__button a')
+var ccBtn = $('.product__meta .compare__link')
 
 pcBtn.click(function(event) {
 	var clTitle = $(this).parent().parent().parent().find('.goods__card_title').find('a').text();
@@ -888,6 +890,21 @@ pcBtn.click(function(event) {
 cpBtn.click(function(event) {
 	$(this).parent().addClass('active');
 	var clTitle = $(this).parent().parent().parent().find('.goods__card_title').find('a').text();
+
+	cpName.text('"' + clTitle + '"');
+});
+
+ppBtn.click(function(event) {
+	var clTitle = $(this).parent().parent().parent().find('.product__title').text();
+	var clVal = $(this).parent().parent().find('.goods__card_quantity input').val();
+
+	pcName.text('"' + clTitle + '"');
+	qVal.text(clVal);
+});
+
+ccBtn.click(function(event) {
+	$(this).parent().addClass('active');
+	var clTitle = $(this).parent().parent().parent().find('.product__title').text();
 
 	cpName.text('"' + clTitle + '"');
 });

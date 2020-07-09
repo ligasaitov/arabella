@@ -3327,6 +3327,11 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
+.pagging__link:hover {
+  background: #F24D4D !important;
+  color: #fff !important;
+}
+
 .pagging__link.active {
   background: #788CA4;
   color: #fff;
