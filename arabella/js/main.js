@@ -871,6 +871,28 @@ if($('.gallery').length>0){
 	});
 }
 
+var pcName = $('.popup-add-cart .product-name');
+var cpName = $('.popup-add-comparison .product-name');
+var qVal = $('.popup-add-cart .q-val');
+var pcBtn = $('.goods__card_cart a');
+var cpBtn = $('.goods__card_comparison a');
+
+pcBtn.click(function(event) {
+	var clTitle = $(this).parent().parent().parent().find('.goods__card_title').find('a').text();
+	var clVal = $(this).parent().parent().parent().find('.goods__card_quantity input').val();
+
+	pcName.text('"' + clTitle + '"');
+	qVal.text(clVal);
+});
+
+cpBtn.click(function(event) {
+	$(this).parent().addClass('active');
+	var clTitle = $(this).parent().parent().parent().find('.goods__card_title').find('a').text();
+
+	cpName.text('"' + clTitle + '"');
+});
+
+
 //POPUP
 $('.pl').click(function(event) {
 	var pl=$(this).attr('href').replace('#','');
@@ -1055,10 +1077,6 @@ if(navigator.appVersion.indexOf("Mac")!=-1){
 $('.header__link').on('click', function(e){
 	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
 	e.preventDefault();
-});
-
-$('.goods__card_comparison').click(function(event) {
-	$(this).toggleClass('active');
 });
 
 $('.check').click(function(event) {

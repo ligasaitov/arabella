@@ -2854,6 +2854,26 @@ footer .footer__body .callback:after {
   background: #F5F6F7;
   padding: 30px;
   margin: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.goods__card:hover {
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  -ms-transform: translate3d(0px, -5px, 0px);
+  transform: translate3d(0px, -5px, 0px);
+}
+
+.goods__card:hover .goods__card_image {
+  filter: sepia(0.6);
+  -webkit-filter: sepia(0.6);
+  -moz-filter: sepia(0.6);
+  -o-filter: sepia(0.6);
+}
+
+.goods__card:hover .goods__card_title a {
+  color: #F24D4D;
 }
 
 .goods__card_list {
@@ -2921,6 +2941,26 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
+.goods__card_comparison a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .goods__card_comparison svg {
   opacity: 0.7;
   -webkit-transition: all 0.3s ease 0s;
@@ -2937,13 +2977,46 @@ footer .footer__body .callback:after {
 
 .goods__card_comparison.active {
   background: #788ca4;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .goods__card_comparison.active svg {
   opacity: 1;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .goods__card_comparison.active svg path {
+  stroke: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.goods__card_comparison.active:hover {
+  background: #F24D4D;
+}
+
+.goods__card_comparison.active:hover svg {
+  opacity: 1;
+}
+
+.goods__card_comparison.active:hover svg path {
+  stroke: #fff;
+}
+
+.goods__card_comparison:hover {
+  background: #F24D4D;
+}
+
+.goods__card_comparison:hover svg {
+  opacity: 1;
+}
+
+.goods__card_comparison:hover svg path {
   stroke: #fff;
 }
 
@@ -2973,6 +3046,30 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
+.goods__card_cart:hover {
+  background: #F24D4D;
+}
+
+.goods__card_cart a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .goods__card_cart svg path {
   fill: #fff;
 }
@@ -2980,6 +3077,9 @@ footer .footer__body .callback:after {
 .goods__card_image {
   height: 300px;
   margin: 10px 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .goods__card_title {
@@ -4933,15 +5033,18 @@ footer .footer__body .callback:after {
   max-width: 1230px;
 }
 
-.popup-add-cart .popup-content {
+.popup-add-cart .popup-content,
+.popup-add-comparison .popup-content {
   max-width: 1230px;
 }
 
-.popup-add-cart .popup-content .buttons-actions {
+.popup-add-cart .popup-content .buttons-actions,
+.popup-add-comparison .popup-content .buttons-actions {
   margin: 20px -20px 0px -20px;
 }
 
-.popup-add-cart .popup-content .buttons-actions .btn {
+.popup-add-cart .popup-content .buttons-actions .btn,
+.popup-add-comparison .popup-content .buttons-actions .btn {
   margin: 0px 20px;
 }
 
@@ -5202,6 +5305,12 @@ footer .footer__body .callback:after {
   position: absolute;
   bottom: -5px;
   right: -8px;
+}
+
+.product-name,
+.q-val {
+  font-weight: 700;
+  color: #F24D4D;
 }
 
 /*!
@@ -5548,7 +5657,6 @@ footer .footer__body .callback:after {
   right: 0px;
   width: 45px;
   height: 100%;
-  background: url("../img/icons/select-arrow.svg") center no-repeat;
 }
 
 .select .select-title__value {
