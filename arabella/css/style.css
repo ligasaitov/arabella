@@ -5004,6 +5004,157 @@ footer .footer__body .callback:after {
   margin: 0px 0px 30px 0px;
 }
 
+.popup-cart .cell .popup-content {
+  position: fixed;
+  width: 410px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  overflow-y: auto;
+  -webkit-transform-origin: right top;
+      -ms-transform-origin: right top;
+          transform-origin: right top;
+}
+
+.popup-cart .cell .popup-content .buttons-actions {
+  margin: 10px 0px 0px 0px;
+}
+
+.popup-cart .cell .popup-content .buttons-actions .btn {
+  margin: 5px 0;
+}
+
+.popup-cart .cell .popup-content .buttons-actions .btn a {
+  font-size: 14px;
+  padding: 20px 40px;
+}
+
+.popup-cart .cell .popup-content .goods__card_list {
+  padding: 0;
+}
+
+.popup-cart .cell .popup-content .goods__card_list .goods__card {
+  padding: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-bottom: 1px solid #37414E;
+}
+
+.popup-cart .cell .popup-content .goods__card_list .goods__card .goods__card_top {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  text-align: left;
+  padding: 0px 0px 0px 40px;
+}
+
+.popup-cart .cell .popup-content .goods__card_list .goods__card .goods__card_image {
+  width: 70px;
+  height: 70px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.popup-cart .cell .popup-content .goods__card_list .goods__card .goods__card_title {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.popup-cart .cell .popup-content .goods__card_list .goods__card .goods__card_bottom {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.popup-cart .cell .popup-content .cart-sum span {
+  font-weight: 600;
+}
+
+.popup-cart .cell .popup-content .cart-del {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0px 0px 0px 20px;
+  position: relative;
+  bottom: -5px;
+  cursor: pointer;
+}
+
+.popup-cart .cell .popup-content .cart-del:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #F24D4D;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.popup-cart .cell .popup-content .cart-del:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #F24D4D;
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.link-cart {
+  position: relative;
+}
+
+.link-cart .cart-val {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  background: #F24D4D;
+  border-radius: 100%;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: -8px;
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
