@@ -5016,6 +5016,55 @@ footer .footer__body .callback:after {
           transform-origin: right top;
 }
 
+.popup-cart .cell .popup-content .popup-close {
+  top: 40px;
+  right: 150px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #F24D4D;
+  z-index: 50;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup-cart .cell .popup-content .popup-close:hover {
+  background: #F24D4D;
+}
+
+.popup-cart .cell .popup-content .popup-close:hover:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+.popup-cart .cell .popup-content .popup-close:hover:before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+.popup-cart .cell .popup-content .popup-close:before,
+.popup-cart .cell .popup-content .popup-close:after {
+  width: 50%;
+  background: #F24D4D;
+  left: 12px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup-cart .cell .popup-content .popup-close:before {
+  top: 30px;
+}
+
+.popup-cart .cell .popup-content .popup-close:after {
+  bottom: 30px;
+}
+
 .popup-cart .cell .popup-content .buttons-actions {
   margin: 10px 0px 0px 0px;
 }
