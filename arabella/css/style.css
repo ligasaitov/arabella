@@ -1223,6 +1223,11 @@ body {
   background: #37414E;
 }
 
+.header__bottom.active {
+  height: 100% !important;
+  padding-bottom: 85px !important;
+}
+
 .main__slider {
   position: relative;
   margin: 50px -20px 0px -20px;
