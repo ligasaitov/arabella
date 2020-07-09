@@ -5318,6 +5318,24 @@ footer .footer__body .callback:after {
   color: #F24D4D;
 }
 
+.content .gallery img {
+  width: 240px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.content .gallery img:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
