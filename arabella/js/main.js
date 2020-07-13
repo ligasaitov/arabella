@@ -1097,7 +1097,7 @@ $('.header__link').on('click', function(e){
 });
 
 $('.check').click(function(event) {
-	$('button.disable').toggleClass('not-disable');
+	$(this).parent().find('button').toggleClass('not-disable');
 });
 
 // filter sort
