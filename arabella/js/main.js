@@ -38,12 +38,6 @@ function adaptive_function() {
 	adaptive_header(w,h);
 }
 	adaptive_function();
-// Dynamic Adapt v.1
-// HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
-// e.x. data-da="item,2,992"
-// Andrikanych Yevhen 2020
-// https://www.youtube.com/c/freelancerlifestyle
-
 "use strict";
 
 (function () {
@@ -174,42 +168,6 @@ function adaptive_function() {
 	}
 }());
 
-/*
-let block = document.querySelector('.click');
-block.addEventListener("click", function (e) {
-	alert('Все ок ;)');
-});
-*/
-
-/*
-//Объявляем переменные
-const parent_original = document.querySelector('.content__blocks_city');
-const parent = document.querySelector('.content__column_river');
-const item = document.querySelector('.content__block_item');
-
-//Слушаем изменение размера экрана
-window.addEventListener('resize', move);
-
-//Функция
-function move(){
-	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (viewport_width <= 992) {
-		if (!item.classList.contains('done')) {
-			parent.insertBefore(item, parent.children[2]);
-			item.classList.add('done');
-		}
-	} else {
-		if (item.classList.contains('done')) {
-			parent_original.insertBefore(item, parent_original.children[2]);
-			item.classList.remove('done');
-		}
-	}
-}
-
-//Вызываем функцию
-move();
-
-*/
 
 //FORMS
 function forms(){
