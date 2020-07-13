@@ -3186,8 +3186,50 @@ footer .footer__body .callback:after {
   cursor: pointer;
 }
 
+.content .breadcrumbs {
+  margin: 0;
+}
+
+.content .breadcrumbs ul li:not(:last-child):after {
+  top: 0;
+  right: -15px;
+}
+
 .breadcrumbs {
   margin: -40px -15px 20px -15px;
+}
+
+.breadcrumbs ul {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumbs ul li {
+  position: relative;
+}
+
+.breadcrumbs ul li:before {
+  display: none;
+}
+
+.breadcrumbs ul li:last-child {
+  opacity: 0.5;
+}
+
+.breadcrumbs ul li:last-child:hover {
+  opacity: 1;
+}
+
+.breadcrumbs ul li:not(:last-child):after {
+  content: '>';
+  position: absolute;
+  top: 2px;
+  right: -5px;
 }
 
 .breadcrumbs_link {
@@ -3202,18 +3244,8 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
-.breadcrumbs_link:last-child {
-  opacity: 0.5;
-}
-
 .breadcrumbs_link:hover {
   opacity: 1;
-}
-
-.breadcrumbs_link:not(:last-child):after {
-  content: '>';
-  position: absolute;
-  right: -20px;
 }
 
 .goods .breadcrumbs {
