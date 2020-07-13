@@ -426,11 +426,30 @@ body {
 .btn__download a {
   width: 100%;
   height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .btn__download span {
-  margin: 0px 20px 0px -20px;
+  width: 100%;
+  height: 100%;
   position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn__download span:after {
@@ -441,11 +460,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  position: absolute;
+  position: relative;
   display: block;
-  top: -webkit-calc(50% - 8px);
-  top: calc(50% - 8px);
-  right: 40px;
+  right: -20px;
 }
 
 .popup {
@@ -1582,7 +1599,7 @@ footer .footer__body .callback:after {
   z-index: 2;
 }
 
-.assortment__title h2 {
+.assortment__title h3 {
   color: #fff;
 }
 
@@ -2081,7 +2098,6 @@ footer .footer__body .callback:after {
 }
 
 .form button {
-  background-color: transparent;
   width: 100%;
 }
 
@@ -2336,7 +2352,6 @@ footer .footer__body .callback:after {
 }
 
 .response .form__response .form-button button {
-  background-color: transparent;
   width: 100%;
 }
 
@@ -3903,7 +3918,7 @@ footer .footer__body .callback:after {
   padding: 0px 0px 0px 0px;
 }
 
-.page .assortment__title h2 {
+.page .assortment__title h3 {
   color: #37414E;
 }
 
@@ -5072,10 +5087,6 @@ footer .footer__body .callback:after {
   background: linear-gradient(180deg, #465568 0%, #465568 100%);
 }
 
-.popup-cart .popup-content {
-  max-width: 1230px;
-}
-
 .popup-comparison .popup-content {
   max-width: 1230px;
 }
@@ -5227,7 +5238,7 @@ footer .footer__body .callback:after {
   margin: 5px 0;
 }
 
-.popup-cart .cell .popup-content .buttons-actions .btn a {
+.popup-cart .cell .popup-content .buttons-actions .btn a span {
   font-size: 14px;
   padding: 20px 40px;
 }
@@ -5380,6 +5391,10 @@ footer .footer__body .callback:after {
   -webkit-transform: scale(1.02);
   -ms-transform: scale(1.02);
   transform: scale(1.02);
+}
+
+.popup__close {
+  cursor: pointer;
 }
 
 /*!
