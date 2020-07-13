@@ -5397,6 +5397,14 @@ footer .footer__body .callback:after {
   cursor: pointer;
 }
 
+.form__error {
+  display: none;
+}
+
+.form-input.err input {
+  border-color: #F24D4D !important;
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
