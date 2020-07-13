@@ -9259,6 +9259,17 @@ ol.counter li:before {
             flex-basis: calc(1000% - 20px);
   }
 
+  .popup-add-cart .popup-content .buttons-actions .btn,
+  .popup-add-comparison .popup-content .buttons-actions .btn {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .popup-add-cart .popup-content .buttons-actions .btn span,
+  .popup-add-comparison .popup-content .buttons-actions .btn span {
+    font-size: 12px;
+    padding: 20px 20px;
+  }
+
   .news-item {
     -webkit-flex-basis: -webkit-calc(100% - 30px);
         -ms-flex-preferred-size: calc(100% - 30px);
