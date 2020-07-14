@@ -15,6 +15,7 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
+});
 //Adaptive functions
 $(window).resize(function(event) {
 	adaptive_function();
@@ -1340,4 +1341,3 @@ function init() {
 	// myMap.behaviors.disable('scrollZoom');
 }
 
-});
