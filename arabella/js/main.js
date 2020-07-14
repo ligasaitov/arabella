@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 		var w=$(window).outerWidth();
 		var h=$(window).outerHeight();
 		var ua = window.navigator.userAgent;
@@ -15,7 +15,7 @@ $(document).ready(function() {
 	if(isMobile.any()){
 		$('body').addClass('touch');
 	}
-});
+// });
 //Adaptive functions
 $(window).resize(function(event) {
 	adaptive_function();
