@@ -1609,8 +1609,17 @@ footer .footer__body .callback:after {
 }
 
 .assortment {
-  margin-top: -379px;
-  z-index: 2;
+  margin-top: 50px;
+  background: #465568;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#465568), color-stop(50%, #465568), color-stop(50%, #ebeef2), to(#ebeef2));
+  background: -o-linear-gradient(top, #465568 0%, #465568 50%, #ebeef2 50%, #ebeef2 100%);
+  background: linear-gradient(to bottom, #465568 0%, #465568 50%, #ebeef2 50%, #ebeef2 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#465568', endColorstr='#ebeef2',GradientType=0 );
+  /* IE6-9 */
 }
 
 .assortment__title h3 {
@@ -1688,6 +1697,35 @@ footer .footer__body .callback:after {
   font-size: 20px;
   line-height: 145%;
   color: #37414E;
+}
+
+.wrap-gray {
+  padding: 0;
+}
+
+.wrap-gray .banner_block,
+.wrap-gray .goods.main-goods {
+  background: #ebeef2;
+  margin: -30px 0px -30px 0px;
+  padding: 30px 0px 30px 0px;
+}
+
+.wrap-gray .about_block,
+.wrap-gray .content {
+  background: #ebeef2;
+}
+
+.wrap-gray .content {
+  margin: 0px 0px -30px 0px;
+  padding: 30px 0px 30px 0px;
+}
+
+.wrap-gray .content__title {
+  margin: 0;
+}
+
+.page .assortment {
+  background: #ebeef2;
 }
 
 .banner {
