@@ -2643,6 +2643,10 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
+.product__content aside {
+  width: 25%;
+}
+
 .goods {
   width: 75%;
   margin: 25px 0px 0px 0px;
