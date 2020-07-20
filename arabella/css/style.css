@@ -5027,6 +5027,12 @@ footer .footer__body .callback:after {
   padding: 0;
 }
 
+.product__recomend .goods__card {
+  -webkit-flex-basis: -webkit-calc(33.333% - 20px);
+      -ms-flex-preferred-size: calc(33.333% - 20px);
+          flex-basis: calc(33.333% - 20px);
+}
+
 .product .goods .breadcrumbs {
   margin: 32px -15px;
 }
