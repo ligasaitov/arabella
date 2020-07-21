@@ -2643,6 +2643,10 @@ footer .footer__body .callback:after {
   transition: all 0.3s ease 0s;
 }
 
+.catalog__nav_list li .catalog__nav_sublist li .cat-nav-icon {
+  display: none;
+}
+
 .product__content aside {
   width: 25%;
 }
