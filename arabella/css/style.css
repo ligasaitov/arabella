@@ -2697,100 +2697,6 @@ footer .footer__body .callback:after {
   color: #37414E;
 }
 
-.goods__filter_sort_price {
-  font-size: 20px;
-  line-height: 26px;
-  color: #37414E;
-  opacity: 0.5;
-  cursor: pointer;
-  margin: 0px 0px 0px 30px;
-  padding: 0px 30px 0px 0px;
-  position: relative;
-}
-
-.goods__filter_sort_price.active {
-  opacity: 1;
-}
-
-.goods__filter_sort_price.active.desc:after,
-.goods__filter_sort_price.active.asc:after {
-  border-top: 6px solid #F24D4D;
-  opacity: 1;
-}
-
-.goods__filter_sort_price.desc:after {
-  content: '';
-  border: 6px solid transparent;
-  border-top: 6px solid #37414E;
-  opacity: 0.5;
-  position: absolute;
-  top: 8px;
-  right: 0;
-}
-
-.goods__filter_sort_price.asc:after {
-  content: '';
-  border: 6px solid transparent;
-  border-top: 6px solid #37414E;
-  opacity: 0.5;
-  position: absolute;
-  top: 14px;
-  right: 0;
-  -webkit-transform-origin: top;
-      -ms-transform-origin: top;
-          transform-origin: top;
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.goods__filter_sort_popularity {
-  font-size: 20px;
-  line-height: 26px;
-  color: #37414E;
-  opacity: 0.5;
-  cursor: pointer;
-  margin: 0px 0px 0px 30px;
-  padding: 0px 30px 0px 0px;
-  position: relative;
-}
-
-.goods__filter_sort_popularity.active {
-  opacity: 1;
-}
-
-.goods__filter_sort_popularity.active.desc:after,
-.goods__filter_sort_popularity.active.asc:after {
-  border-top: 6px solid #F24D4D;
-  opacity: 1;
-}
-
-.goods__filter_sort_popularity.desc:after {
-  content: '';
-  border: 6px solid transparent;
-  border-top: 6px solid #37414E;
-  opacity: 0.5;
-  position: absolute;
-  top: 8px;
-  right: 0;
-}
-
-.goods__filter_sort_popularity.asc:after {
-  content: '';
-  border: 6px solid transparent;
-  border-top: 6px solid #37414E;
-  opacity: 0.5;
-  position: absolute;
-  top: 14px;
-  right: 0;
-  -webkit-transform-origin: top;
-      -ms-transform-origin: top;
-          transform-origin: top;
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
 .goods__filter_show {
   display: -webkit-flex;
   display: -moz-flex;
@@ -6708,16 +6614,6 @@ ol.counter li:before {
   }
 
   .goods__filter_sort_title {
-    font-size: 16px;
-    line-height: 21px;
-  }
-
-  .goods__filter_sort_price {
-    font-size: 16px;
-    line-height: 21px;
-  }
-
-  .goods__filter_sort_popularity {
     font-size: 16px;
     line-height: 21px;
   }
