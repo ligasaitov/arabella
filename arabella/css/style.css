@@ -5337,6 +5337,37 @@ footer .footer__body .callback:after {
   right: -8px;
 }
 
+.header__icons_link.comparison {
+  position: relative;
+}
+
+.header__icons_link.comparison .comparison-val {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  background: #F24D4D;
+  border-radius: 100%;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: -8px;
+}
+
 .product-name,
 .q-val {
   font-weight: 700;
