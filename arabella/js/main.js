@@ -1096,27 +1096,26 @@ catNavIcon.click(function(event) {
 	$(this).parent().toggleClass('active');
 });
 
-$('.goods__card_quantity_minus').click(function () {
-	var $input = $(this).parent().find('input');
-	var count = parseInt($input.val()) - 1;
-	count = count < 1 ? 1 : count;
-	$input.val(count);
-	$input.change();
-	return false;
+$(document).on('click','.goods__card_quantity_minus',function () {
+var $input = $(this).parent().find('input');
+var count = parseInt($input.val()) - 1;
+count = count < $input.data('min') ? $input.data('min') : count;
+$input.val(count);
+$input.change();
+return false;
 });
-$('.goods__card_quantity_plus').click(function () {
-	var $input = $(this).parent().find('input');
-	var count = parseInt($input.val()) + 1;
-	var max = $input.attr('max');
-	count = count >= max ? max : count;
-	$input.val(count);
-	$input.change();
-	return false;
+$(document).on('click','.goods__card_quantity_plus',function () {
+var $input = $(this).parent().find('input');
+var count = parseInt($input.val()) + 1;
+count = count >= $input.data('max') ? $input.data('max') : count;
+$input.val(count);
+$input.change();
+return false;
 });
 
 $('.goods__card_quantity_num').on('input', function() {
-  $(this).val((i, v) => Math.max(this.min, Math.min(this.max, v)));
-});
+ $(this).val((i, v) => Math.max($(this).data('min'), Math.min($(this).data('max'), v)));
+})
 // MAIN SLIDER
 let mainSlider = $('.main__slider');
 if(mainSlider.length > 0) {
