@@ -1106,9 +1106,15 @@ $('.goods__card_quantity_minus').click(function () {
 });
 $('.goods__card_quantity_plus').click(function () {
 	var $input = $(this).parent().find('input');
-	$input.val(parseInt($input.val()) + 1);
+	var count = parseInt($input.val()) + 1;
+	count = count >= 99 ? 99 : count;
+	$input.val(count);
 	$input.change();
 	return false;
+});
+
+$('.goods__card_quantity_num').on('input', function() {
+  $(this).val((i, v) => Math.max(this.min, Math.min(this.max, v)));
 });
 // MAIN SLIDER
 let mainSlider = $('.main__slider');
