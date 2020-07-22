@@ -1107,7 +1107,8 @@ $('.goods__card_quantity_minus').click(function () {
 $('.goods__card_quantity_plus').click(function () {
 	var $input = $(this).parent().find('input');
 	var count = parseInt($input.val()) + 1;
-	count = count >= 99 ? 99 : count;
+	var max = $input.attr('max');
+	count = count >= max ? max : count;
 	$input.val(count);
 	$input.change();
 	return false;
