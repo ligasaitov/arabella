@@ -5437,6 +5437,20 @@ footer .footer__body .callback:after {
   padding: 0 !important;
 }
 
+.content .pagging {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /*!
  * baguetteBox.js
  * @author  feimosi
